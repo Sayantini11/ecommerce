@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <!-- <a href = "/categories"> List Categories </a>
+    <a href = "/products"> List Products </a> -->
+    <%= link_to "Categories", categories_path %> | <%= link_to "Products", products_path %> 
+    <%= notice %>
     <%= yield %>
   </body>
 </html>

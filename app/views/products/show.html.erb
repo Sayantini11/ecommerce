@@ -1,0 +1,14 @@
+<h2><%= @product.name %> </h2>
+<p> 
+	<%= link_to "Edit", edit_product_path(@product.id) %>|
+	<%= link_to "Delete", product_path(@product.id), method: :delete,  data: {confirm: "Are you sure?"} %>
+</p>
+<p> <%= @product.description %> </p>
+<p> INR <%= @product.price %><br/> <%= @product.cod_eligible ? "COD Eligible" : "COD Not Eligible "%></p>
+<%= Category.find(@product.category_id).name %>
+<%= link_to "List products", products_path %>
+<%= image_tag(@product.image_url, size: "200x200") %> 
+
+
+<br/><br/>
+ 

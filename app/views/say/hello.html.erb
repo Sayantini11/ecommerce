@@ -1,0 +1,26 @@
+<h2> Hello world </h2>
+<a href = "/say/goodbye"> Visit Goodbye </a> | <a href = "https://www.google.com" target="_blank"> Visit Google </a>
+
+<h3> Listing Fruits (8) </h3>
+<!-- unordered list -->
+	<ul>
+		<li> Mango</li>
+		<li>Pineapple</li>
+		<li>Apple</li>
+		<li>Watermelon</li>
+		<li>Papaya</li>
+		<li>Kiwi</li>
+		<li>Orange</li>
+		<li>Grapes</li>
+	</ul>
+
+	<% fruits = ["mango", "pineapple", "apple", "watermelon", "papaya", "pear", "kiwi", "banana", "orange", "grapes", "guava"] %> <!--eavaluation tag -->
+
+	<h3> Listing fruits (<%= fruits.length %>  <!-- presentation tag -->) </h3>
+	<ol>
+		<%fruits.sort.each do |fruit| %>  <!-- any ruby code in html is written in <%  %> format -->
+		<li><%= fruit.capitalize %> </li>
+		<% end %>
+	</ol>
+
+
